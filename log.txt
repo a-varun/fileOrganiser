@@ -1,0 +1,41 @@
+mkdir /home/varun/MyFiles/VARUN/
+mkdir /home/varun/MyFiles/VARUN/
+mkdir /home/varun/MyFiles/VARUN/java
+mkdir /home/varun/MyFiles/VARUN/sh
+sh advanced.sh /home/varun/MyFiles/VARUN/java /media/varun/VARUN/ /home/varun/codes/fileO/ java
+sh advanced.sh /home/varun/MyFiles/VARUN/sh /media/varun/VARUN/ /home/varun/codes/fileO/ sh
+mkdir /home/varun/MyFiles/VARUN/
+mkdir /home/varun/MyFiles/VARUN/class
+sh advanced.sh /home/varun/MyFiles/VARUN/class /media/varun/VARUN/ /home/varun/codes/fileO/ class
+mkdir /home/varun/MyFiles/VARUN/
+sh advanced2.sh /home/varun/MyFiles/VARUN/ /media/varun/VARUN/ /home/varun/codes/fileO/ class class
+mkdir /home/varun/MyFiles/VARUN/
+sh advanced2.sh /home/varun/MyFiles/VARUN/ /media/varun/VARUN/ /home/varun/codes/fileO/ java java
+mkdir /home/varun/MyFiles/VARUN/
+sh advanced2.sh /home/varun/MyFiles/VARUN/ /media/varun/VARUN/ /home/varun/codes/fileO/ sh sh
+mkdir /home/varun/MyFiles/VARUN/
+mkdir /home/varun/MyFiles/VARUN/sh
+sh advanced.sh /home/varun/MyFiles/VARUN/sh /media/varun/VARUN/ /home/varun/codes/fileO/ sh
+mkdir /home/varun/MyFiles/VARUN/
+sh advanced2.sh /home/varun/MyFiles/VARUN/ /media/varun/VARUN/ /home/varun/codes/fileO/ java java
+mkdir /home/varun/MyFiles/VARUN/
+mkdir /home/varun/MyFiles/VARUN/class
+sh advanced.sh /home/varun/MyFiles/VARUN/class /media/varun/VARUN/ /home/varun/codes/fileO/ class
+mkdir /home/varun/MyFiles/VARUN/
+mkdir /home/varun/MyFiles/VARUN/py
+sh advanced.sh /home/varun/MyFiles/VARUN/py /media/varun/VARUN/ /home/varun/codes/fileO/ py
+mkdir /home/varun/MyFiles/VARUN/
+mkdir /home/varun/MyFiles/VARUN/java
+sh advanced.sh /home/varun/MyFiles/VARUN/java /media/varun/VARUN/ /home/varun/codes/fileO/ java
+mkdir /home/varun/MyFiles/VARUN/
+mkdir /home/varun/MyFiles/VARUN/txt
+sh advanced.sh /home/varun/MyFiles/VARUN/txt /media/varun/VARUN/ /home/varun/codes/fileO/ txt
+mkdir /home/varun/MyFiles/VARUN/
+mkdir /home/varun/MyFiles/VARUN/sh
+sh advanced.sh /home/varun/MyFiles/VARUN/sh /media/varun/VARUN/ /home/varun/codes/fileO/ sh
+mkdir /home/varun/MyFiles/VARUN/
+sh advanced2.sh /home/varun/MyFiles/VARUN/ /media/varun/VARUN/ /home/varun/codes/fileO/ class class
+mkdir /home/varun/MyFiles/VARUN/
+sh advanced2.sh /home/varun/MyFiles/VARUN/ /media/varun/VARUN/ /home/varun/codes/fileO/ java java
+mkdir /home/varun/MyFiles/VARUN/
+sh advanced2.sh /home/varun/MyFiles/VARUN/ /media/varun/VARUN/ /home/varun/codes/fileO/ sh sh

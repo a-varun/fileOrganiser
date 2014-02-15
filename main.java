@@ -55,7 +55,7 @@ class Drivers implements Runnable {
 			{
 				if(s.charAt(i)=='.')break;
 			}
-			se.add(s.substring(i));
+			se.add(s.substring(i+1));
 		}
 		ArrayList<String> ar = new ArrayList<String>();
 		for(String s:se)
@@ -67,25 +67,28 @@ class Drivers implements Runnable {
         
 	public void run(){
             try{
-            String destination = "~/MyFiles/";
+            String destination = "/home/varun/MyFiles/";
             String source = "/media/varun/";
             source = source + driveName;
-            source = source + "/";
             destination = destination + driveName;
             Scanner sc = new Scanner(System.in);
-            destination  = destination + "/";
             System.out.println("Found the Driver "+driveName+". Do you want to:");
             System.out.println("1. Ignore");
             System.out.println("2. Copy the extensions to a single folder.");
             System.out.println("3. Clone the Drive.");
-            int i= sc.nextInt();
+            int i;
+            while(true){
+            i= sc.nextInt();
             if(i==1){
                 System.out.println("Ignored!!!");
                return;
             }
+            if(i<=0||i>3) {System.out.println("Wrong choice!!!Enter again");continue;}
+            break;
+            }
             ArrayList<String> temp = new ArrayList();
             String line;
-            String command = "sh getextensions.sh "+destination+" "+source;
+            String command = "sh /home/varun/codes/fileO/getextensions.sh "+destination+" "+source;
             Runtime run = Runtime.getRuntime();
             Process pr = run.exec(command);
             pr.waitFor();
@@ -94,28 +97,65 @@ class Drivers implements Runnable {
 		temp.add(line); ;
             }
             ArrayList<String> extensions = extension(temp);
-            if(i==2){
-                  pr = run.exec("clear");
-                  for(int ij=0;ij<5;ij++) System.out.println();
-                  System.out.println("The Extensions available in your Drive are:");
-                  for(int ij=0;ij<extensions.size();i++){
-                      System.out.println((i+1)+". "+extensions.get(i));
-                  }
-                  System.out.print("Enter 0 to copy all the Extensions\nor enter the appropriate id for the extension:");
-                  int option = sc.nextInt();
-                  if(option == 0){
-                      System.out.println("You have chosen to copy all the extensions.\nPlease wait while the process completes.");
-                      for(int ik=0;ik<extensions.size();ik++){
-                          String dest2 = destination + extensions.get(i);
-                          dest2 = dest2 + "/";
-                          pr = run.exe("mkdir "+dest2);
-                          System.out.println("sh copy_oneDirectory.sh ")
-                          
-                      }
-                  }
+            Runtime run1 = Runtime.getRuntime();
+            for(int ij=0;ij<5;ij++) System.out.println();
+            System.out.println("The Extensions available in your Drive are:");
+            for(int ij=0;ij<extensions.size();ij++){
+               System.out.println((ij+1)+". "+extensions.get(ij));
+            }
+            
+            System.out.print("Enter 0 to copy all the Extensions\nor enter the appropriate id for the extension:");
+            int option;
+            while(true){
+            option = sc.nextInt();
+               if(option<0 || option >extensions.size()){System.out.println("Wrong choice!!!Enter again!!!");continue;}
+               break;
+            }
+            if(option == 0){
+                System.out.println("You have chosen to copy all the extensions.\nPlease wait while the process completes.");
+                for(int ik=0;ik<extensions.size();ik++){
+                    String dest2 = destination;
+              
+             //       Runtime run2 = Runtime.getRuntime();
+                    String str22 = "mkdir "+dest2;
+            //        Process pr2 = run2.exec(str22);
+            //        pr2.waitFor();
+                    if(i==2){
+             
+                    Runtime run3 = Runtime.getRuntime();
+                    String ssg = "sh copy_onedir.sh "+source+" "+dest2+" "+extensions.get(ik);
+                    Process pr3 = run3.exec(ssg);
+                  //  pr3.waitFor();
+                    }
+                    else{
+                    Runtime run4 = Runtime.getRuntime();
+                    String sgp = "sh copy_clone.sh "+source+" "+dest2+" "+extensions.get(ik);
+                    Process pr4 = run4.exec(sgp);
+                    pr4.waitFor();
+                    }
+                      
+                }
+              
+            }
+            else if(option <= extensions.size()&&option >0){
+                    String dest2 = destination;
+              
+                    String str22 = "mkdir "+dest2;
+                    if(i==2){
+                    Runtime run3 = Runtime.getRuntime();
+                    String ssg = "sh copy_onedir.sh "+source+" "+dest2+" "+extensions.get(option-1);
+                    Process pr3 = run3.exec(ssg);
+                    }
+                    else{
+                    Runtime run4 = Runtime.getRuntime();
+                    String sgp = "sh copy_clone.sh "+source+" "+dest2+" "+extensions.get(option-1);
+                    Process pr4 = run4.exec(sgp);
+                    pr4.waitFor();
+                    }
+            
+                
                   
-            }
-            }
+            }}
             catch(Exception e){
                 System.out.println("Exception caught.");
                 System.out.println(e);

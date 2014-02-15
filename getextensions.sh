@@ -1,4 +1,5 @@
 #Here, $1 will specify the base folder and $2 will specify the folder to be gone to
+
 cd $2
 q=`ls *.*`
 for j in ${q}
