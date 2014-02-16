@@ -5,9 +5,15 @@ import java.util.*;
 
 class Drivers implements Runnable {
 	String driveName;
+        int sum=0;
+        int doing=0;
 	Drivers() throws Exception {
                 ArrayList<String> pdvs = new ArrayList<String>(),temp= new ArrayList<String>() ;
-		while(true){
+		while(true){if(doing>0) continue;
+                System.out.println("\033[H\033[2J");
+                    System.out.println("Listening ");
+                    for(int i=0;i<=sum/100;i++) System.out.print(". ");
+                    sum=(sum+1)%1000;
                         //System.out.println("From the top"+pdvs);
             temp= new ArrayList<String>();
             String cmd = "ls -p /media/varun/" ;
@@ -67,8 +73,10 @@ class Drivers implements Runnable {
         
 	public void run(){
             try{
+                doing=1;
             String destination = "/home/varun/MyFiles/";
             String source = "/media/varun/";
+            System.out.println();
             source = source + driveName;
             destination = destination + driveName;
             Scanner sc = new Scanner(System.in);
@@ -83,6 +91,7 @@ class Drivers implements Runnable {
             i= sc.nextInt();
             if(i==1){
                 System.out.println("Ignored!!!");
+                doing=0;
                return;
             }
             if(i<=0||i>3) {System.out.println("Wrong choice!!!Enter again");continue;}

@@ -4,7 +4,7 @@ cd $2
 q=`ls *.*`
 for j in ${q}
 do
-	echo "$j"
+	echo "$j" 
 done
 
 p=` ls -l $MYDIR | egrep '^d' | awk '{print $9}' ` 
