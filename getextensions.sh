@@ -14,5 +14,4 @@ do
 	cd $1
 	sh getextensions.sh $1 $2/$dirs $3 $4
 done
-
 cd $2

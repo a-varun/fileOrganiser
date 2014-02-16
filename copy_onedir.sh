@@ -6,4 +6,4 @@ echo "mkdir $2" >> log.txt;
 echo "mkdir $2$3" >> log.txt;
 echo "sh advanced.sh $2$3 $1 $currdir/ $3" >>log.txt;
 sh advanced.sh $2$3 $1 $currdir/ $3
-notify-send "Finished copying"
+notify-send "File transfer" "Finished copying the extension $3"

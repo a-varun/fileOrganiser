@@ -9,8 +9,8 @@ class Drivers implements Runnable {
                 ArrayList<String> pdvs = new ArrayList<String>(),temp= new ArrayList<String>() ;
 		while(true){
                         //System.out.println("From the top"+pdvs);
-                        temp= new ArrayList<String>();
-                        String cmd = "ls -p /media/varun/" ;
+            temp= new ArrayList<String>();
+            String cmd = "ls -p /media/varun/" ;
 			Runtime run = Runtime.getRuntime() ;
 			Process pr = run.exec(cmd) ;
 			pr.waitFor() ;
@@ -88,13 +88,23 @@ class Drivers implements Runnable {
             }
             ArrayList<String> temp = new ArrayList();
             String line;
-            String command = "sh /home/varun/codes/fileO/getextensions.sh "+destination+" "+source;
+            String command = "sh /home/varun/codes/fileO/exten.sh "+source.substring(0,source.length()-1);
             Runtime run = Runtime.getRuntime();
             Process pr = run.exec(command);
             pr.waitFor();
             BufferedReader buf = new BufferedReader( new InputStreamReader( pr.getInputStream() ) ) ;
             while ((line=buf.readLine())!=null) {
-		temp.add(line); ;
+                int flag=0;
+                int deci=0;
+                for(int ip=0;ip<line.length();ip++){
+                    if(line.charAt(ip)=='.'){deci++;continue;}
+                    else if((line.charAt(ip)>='A'&&line.charAt(ip)<='Z')||(line.charAt(ip)>='a'&&line.charAt(ip)<='z')||(line.charAt(ip)>='0'&&line.charAt(ip)<='9'))
+                        continue;
+                    flag=1;
+		          System.out.println(line.charAt(ip));
+                }
+                if(flag==0&&deci==1){
+                temp.add(line);
             }
             ArrayList<String> extensions = extension(temp);
             Runtime run1 = Runtime.getRuntime();
@@ -125,13 +135,15 @@ class Drivers implements Runnable {
                     Runtime run3 = Runtime.getRuntime();
                     String ssg = "sh copy_onedir.sh "+source+" "+dest2+" "+extensions.get(ik);
                     Process pr3 = run3.exec(ssg);
-                  //  pr3.waitFor();
+                    pr3.waitFor();
+                    System.out.println("File transfer completed!!!");
                     }
                     else{
                     Runtime run4 = Runtime.getRuntime();
                     String sgp = "sh copy_clone.sh "+source+" "+dest2+" "+extensions.get(ik);
                     Process pr4 = run4.exec(sgp);
                     pr4.waitFor();
+                    System.out.println("File transfer completed!!!");
                     }
                       
                 }
@@ -145,16 +157,16 @@ class Drivers implements Runnable {
                     Runtime run3 = Runtime.getRuntime();
                     String ssg = "sh copy_onedir.sh "+source+" "+dest2+" "+extensions.get(option-1);
                     Process pr3 = run3.exec(ssg);
+                    pr3.waitFor();
+                    System.out.println("File transfer completed!!!");
                     }
                     else{
                     Runtime run4 = Runtime.getRuntime();
                     String sgp = "sh copy_clone.sh "+source+" "+dest2+" "+extensions.get(option-1);
                     Process pr4 = run4.exec(sgp);
                     pr4.waitFor();
-                    }
-            
-                
-                  
+                    System.out.println("File transfer completed!!!");
+                    }                  
             }}
             catch(Exception e){
                 System.out.println("Exception caught.");

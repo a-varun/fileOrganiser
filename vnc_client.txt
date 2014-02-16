@@ -1,3 +1,0 @@
-sudo apt-get install xtightvncviewer
-
-xtightvncviewer 127.0.0.1:1
