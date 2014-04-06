@@ -1,0 +1,75 @@
+mkdir /home/varun/MyFiles/aa/
+mkdir /home/varun/MyFiles/aa/cpp
+sh advanced.sh /home/varun/MyFiles/aa/cpp /media/varun/aa/ /home/varun/codes/fileorganiser/ cpp
+mkdir /home/varun/MyFiles/aa/
+mkdir /home/varun/MyFiles/aa/cpp
+sh advanced.sh /home/varun/MyFiles/aa/cpp /media/varun/aa/ /home/varun/codes/fileorganiser/ cpp
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/txt
+sh advanced.sh /home/varun/MyFiles/E2E7-0ADD/txt /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ txt
+mkdir "/home/varun/MyFiles/E2E7-0ADD/"
+sh advanced2.sh "/home/varun/MyFiles/E2E7-0ADD/" "/media/varun/E2E7-0ADD/" /home/varun/codes/fileorganiser/ "cpp" "cpp"
+mkdir "/home/varun/MyFiles/E2E7-0ADD/"
+sh advanced2.sh "/home/varun/MyFiles/E2E7-0ADD/" "/media/varun/E2E7-0ADD/" /home/varun/codes/fileorganiser/ "py" "py"
+mkdir "/home/varun/MyFiles/E2E7-0ADD/"
+sh advanced2.sh "/home/varun/MyFiles/E2E7-0ADD/" "/media/varun/E2E7-0ADD/" /home/varun/codes/fileorganiser/ "txt" "txt"
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+sh advanced2.sh /home/varun/MyFiles/E2E7-0ADD/ /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py py
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+sh advanced2.sh /home/varun/MyFiles/E2E7-0ADD/ /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py py
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+sh advanced2.sh /home/varun/MyFiles/E2E7-0ADD/ /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py py
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+sh advanced2.sh /home/varun/MyFiles/E2E7-0ADD/ /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py py
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir "/home/varun/MyFiles/E2E7-0ADD/"
+mkdir "/home/varun/MyFiles/E2E7-0ADD/"
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir "/home/varun/MyFiles/E2E7-0ADD/"
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir "/home/varun/MyFiles/E2E7-0ADD/"
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+sh advanced2.sh /home/varun/MyFiles/E2E7-0ADD/ /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py py
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+sh advanced2.sh /home/varun/MyFiles/E2E7-0ADD/ /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py py
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/py
+sh advanced.sh /home/varun/MyFiles/E2E7-0ADD/py /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/py
+sh advanced.sh /home/varun/MyFiles/E2E7-0ADD/py /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/py
+sh advanced.sh /home/varun/MyFiles/E2E7-0ADD/py /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/py
+sh advanced.sh /home/varun/MyFiles/E2E7-0ADD/py /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/py
+sh advanced.sh /home/varun/MyFiles/E2E7-0ADD/py /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/py
+sh advanced.sh /home/varun/MyFiles/E2E7-0ADD/py /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/py
+sh advanced.sh /home/varun/MyFiles/E2E7-0ADD/py /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/py
+sh advanced.sh /home/varun/MyFiles/E2E7-0ADD/py /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py
+mkdir /home/varun/MyFiles/E2E7-0ADD/
+mkdir /home/varun/MyFiles/E2E7-0ADD/py
+sh advanced.sh /home/varun/MyFiles/E2E7-0ADD/py /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py

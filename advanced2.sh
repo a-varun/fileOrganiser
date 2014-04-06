@@ -1,30 +1,38 @@
 #the $1 will specify tgt, $2 will specify current dir, $3 the base dir, $4 the extension, $5 the previous dir
 
 mkdir $1
-cd $2
+cd "$2"
+echo `ls`
 fl=0
 fil=$1/$5
-q=`ls *.$4`
-for j in ${q}
+echo "ls *.$4"
+ls *.$4|
+while read j
 do
 	fl=1
-	mkdir $fil
+	mkdir "$fil"
 	echo "Copying $j to $1"
-	cp $j $fil
+	cp "$j" "$fil"
 done
-
-p=` ls -l -p $MYDIR | egrep '^d' | awk '{print $9}' ` 
-
-for dirs in ${p}
-do
-	cd $3
-	echo "calling sh unpack.sh $1/$dirs $2$dirs $3 $4"
+flags=1
+find "$MYDIR"-maxdepth 1 -type d|
+while read dir
+	do
+	echo $dir
+	if [ $flags -eq 1 ]
+	then
+		flags=3;
+		continue;
+	fi
+	echo $dir "Outside if"
+	cd "$3"
 	if [ $fl -eq 1 ]
 	then
 		flip=$1/$5
 	else
 		flip=$1
 	fi
-	sh advanced2.sh $flip $2/$dirs $3 $4 $dirs
+	echo sh advanced2.sh "$flip" "$2/$dir" "$3" "$4" "$dir"
+	sh advanced2.sh "$flip" "$2/$dir" "$3" "$4" "$dir"
 done
-cd $3
+cd "$3"

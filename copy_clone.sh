@@ -3,6 +3,5 @@ currdir=`pwd`
 cdn=`basename "$PWD"`
 mkdir $2
 echo "mkdir $2" >> log.txt
-echo "sh advanced2.sh $2 $1 $currdir/ $3 $3" >> log.txt
-sh advanced2.sh $2 $1 $currdir/ $3
+sh advanced2.sh "$2" "$1" "$currdir/" "$3" "$3"
 notify-send "File transfer" "Finished copying the extension $3" -t 4

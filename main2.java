@@ -35,20 +35,23 @@ class Drivers implements Runnable {
                             if(fl==1) continue;
                             pdvs.remove(i);
                         }
+
                         //System.out.println("Through the middle"+pdvs);
-                        for(int i=0;i<temp.size();i++){
+                        for(int i=0;i<(int)temp.size();i++){
                             int fl=0;
-                            for(int j=0;j<pdvs.size();j++){
-                                if(pdvs.get(i).equals(temp.get(j))){fl=1;break;}
+                            for(int j=0;j<(int)pdvs.size();j++){
+                                System.out.println(i);
+                                System.out.println(temp.size());
+                                System.out.println(j);
+                                System.out.println(pdvs.size());
+                                if(pdvs.get(j).equals(temp.get(i))){fl=1;break;}
                             }
                             if(fl==1) continue;
                             Thread t = new Thread(this, "a process");
                             driveName = temp.get(i);
                             pdvs.add(temp.get(i));
                             t.start();
-                            Thread.sleep(1000);
                         }
-                        //System.out.println("To the bottom"+spdvs);
 		}
 	}
         ArrayList<String> extension(ArrayList<String> fi)
@@ -99,20 +102,18 @@ class Drivers implements Runnable {
             }
             ArrayList<String> temp = new ArrayList();
             String line;
-            String command = "sh /home/varun/codes/fileO/exten.sh "+source.substring(0,source.length()-1);
+            String command = "sh /home/varun/codes/fileorganiser/exten.sh "+source.substring(0,source.length()-1);
+            System.out.println(command);
             Runtime run = Runtime.getRuntime();
             Process pr = run.exec(command);
             pr.waitFor();
             BufferedReader buf = new BufferedReader( new InputStreamReader( pr.getInputStream() ) ) ;
-            while ((line=buf.readLine())!=null) {
+            while ((line=buf.readLine())!=null){
+                System.out.println(line);
                 int flag=0;
                 int deci=0;
                 for(int ip=0;ip<line.length();ip++){
                     if(line.charAt(ip)=='.'){deci++;continue;}
-                    else if((line.charAt(ip)>='A'&&line.charAt(ip)<='Z')||(line.charAt(ip)>='a'&&line.charAt(ip)<='z')||(line.charAt(ip)>='0'&&line.charAt(ip)<='9'))
-                        continue;
-                    flag=1;
-		  
                 }
           
                 if(flag==0&&deci==1){
@@ -154,7 +155,8 @@ class Drivers implements Runnable {
                     }
                     else{
                     Runtime run4 = Runtime.getRuntime();
-                    String sgp = "sh copy_clone.sh "+source+" "+dest2+" "+extensions.get(ik);
+                    String sgp = "sh copy_clone.sh \""+source+"\" \""+dest2+"\" \""+extensions.get(ik)+"\"";
+                    System.out.println(sgp);
                     Process pr4 = run4.exec(sgp);
                     pr4.waitFor();
                     System.out.println("File transfer of extension "+extensions.get(ik)+" completed!!!");
@@ -170,6 +172,7 @@ class Drivers implements Runnable {
                     if(i==2){
                     Runtime run3 = Runtime.getRuntime();
                     String ssg = "sh copy_onedir.sh "+source+" "+dest2+" "+extensions.get(option-1);
+                    System.out.println(ssg);
                     Process pr3 = run3.exec(ssg);
                     pr3.waitFor();
                     System.out.println("File transfer of extension "+extensions.get(option-1)+" completed!!!");
@@ -196,7 +199,7 @@ class mainclass
 {
 	public static void main(String[] args) throws Exception
 	{
-		Drivers p = new Drivers();
+		new Drivers();
 	}
 
 }
