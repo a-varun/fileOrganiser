@@ -9,7 +9,7 @@ do
 	cp "$j" "$1"
 done
 flags=1
-find "$MYDIR"-maxdepth 1 -type d|
+ls -l -p $MYDIR | egrep '^d' | awk '{print $9}'|
 while read dir
 	do
 	echo $dir

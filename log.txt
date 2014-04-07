@@ -73,3 +73,10 @@ sh advanced.sh /home/varun/MyFiles/E2E7-0ADD/py /media/varun/E2E7-0ADD/ /home/va
 mkdir /home/varun/MyFiles/E2E7-0ADD/
 mkdir /home/varun/MyFiles/E2E7-0ADD/py
 sh advanced.sh /home/varun/MyFiles/E2E7-0ADD/py /media/varun/E2E7-0ADD/ /home/varun/codes/fileorganiser/ py
+mkdir "/home/varun/MyFiles/E2E7-0ADD/"
+mkdir /home/varun/MyFiles/VARUNDRIVE/
+mkdir /home/varun/MyFiles/VARUNDRIVE/img
+sh advanced.sh /home/varun/MyFiles/VARUNDRIVE/img /media/varun/VARUNDRIVE/ /home/varun/codes/fileorganiser/ img
+mkdir /home/varun/MyFiles/VARUNDRIVE/
+mkdir /home/varun/MyFiles/VARUNDRIVE/docx
+sh advanced.sh /home/varun/MyFiles/VARUNDRIVE/docx /media/varun/VARUNDRIVE/ /home/varun/codes/fileorganiser/ docx
